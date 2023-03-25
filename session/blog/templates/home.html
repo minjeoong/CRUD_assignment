@@ -1,0 +1,8 @@
+<h1>LIKELION 11 Blog Project</h1>
+<div>
+    {% for blog in blogs %}
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.content}}</p>
+    <p>{{blog.created_at}}</p>
+    {% end for %}
+</div>
