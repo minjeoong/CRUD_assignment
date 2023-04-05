@@ -1,0 +1,156 @@
+*{
+    margin:0;
+}
+
+
+h1 {
+    text-align: left;
+    margin-left: 19rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+}
+/* 메뉴 */
+.gnb{
+    height: 66px;
+    display:block;
+    padding:0 0 0 15rem;
+    
+}
+ul{
+    list-style-type: none;
+    display:inline-block;
+    vertical-align: bottom;
+    height: 66px;
+   
+}
+
+li{
+    float: left;
+    padding: 0 26px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-size: 13px;
+    height: 40px;
+}
+
+
+
+
+/* 링크 컬러변경 */
+li > a{
+    text-decoration-line: none;
+    color: black;
+    padding-bottom: 25px;
+    border-bottom: 5px solid #000;
+}
+a:visited{
+    color:teal;
+}
+
+
+/* 디테일 메인 백그라운드 */
+.mainback{
+    background-color: #33333321;
+    height: 15rem;
+    padding:0 2rem 0 19rem;
+}
+
+/* 디테일 메인 타이틀  */
+.main{
+    padding:6rem 0 0 0 ;
+
+}
+.title{
+    font-size: 20px;
+}
+.created{
+    height: 20px;
+    padding-top: 13px;
+    font-size: 12px;
+    display: block;
+    color: #888;
+}
+
+/* 홈으로 */
+.divnew{
+    text-align: center;
+    padding:0 0 1.5rem 0 ;
+}
+.newreport {
+    
+    padding:5px;
+    border-radius: 6px;
+    background-color: rgba(0, 128, 128, 0.63);
+    text-decoration-line: none;
+}
+.newreport:visited{
+    color: #000;
+}
+
+
+
+/* 수정하기 삭제하기 */
+.edit_button{
+    transition: 0.5s;
+    text-align: right;
+    margin:1rem 15rem 0 0 ;
+    height:4rem;
+    vertical-align:middle;
+    
+}
+
+.button{
+    text-decoration-line: none;
+    color: black;
+    /* background-color: rgba(0, 128, 128, 0.63); */
+    padding:5px;
+    margin:5px;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.button:hover{
+    border-bottom: 3px solid rgba(0, 128, 128, 0.63);
+}
+.button:visited{
+    color:#000;
+}
+
+
+/* 글 자체  */
+
+.content{
+    padding:0 15rem 3rem 19rem;
+
+}
+
+/* 댓글 기능 */
+.comment_title{
+    margin-bottom: 5px;
+}
+.comment_Container{
+    padding:0 15rem 3rem 19rem;
+}
+.comment_body{
+    width: 100%;
+}
+.btn{
+    float: right;
+    margin:1rem 0 5rem 0;
+    padding: 4px 20px 4px 20px;
+    background-color:rgba(0, 128, 128, 0.63);
+    border:none;
+    border-radius: 6px;
+}
+
+
+
+/* new.html */
+.title{
+    margin-bottom: 10px;
+
+}
+
+/* search */
+.container{
+    
+}

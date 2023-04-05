@@ -1,0 +1,63 @@
+
+*{
+    margin:0;
+}
+
+
+h1 {
+    text-align: left;
+    margin-left: 20rem;
+    margin-top:2rem;
+    
+}
+/* .main{
+    background-color:antiquewhite;
+    height: 20rem;
+    display: block;
+    position: rela;
+} */
+
+a{
+    text-decoration-line: none;
+    color: black;
+}
+a:visited{
+    color:teal;
+}
+
+/* 새글 작성하가ㅣ */
+.divnew{
+    text-align: center;
+    padding:2rem 0 1.5rem 0 ;
+}
+.newreport {
+    
+    padding:5px;
+    border-radius: 6px;
+    color:#fff;
+    
+    background-color: rgba(0, 128, 128, 0.63);
+}
+.newreport:visited{
+    color: #000;
+}
+
+/* 글 자체 */
+.report{
+    text-align: center;
+    
+}
+.report_detail{
+    
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    padding:1rem 0 1rem 0 ;
+    /* border-radius: 10px; */
+    margin:0 20rem 1.5rem 20rem;
+    transition: 0.5s;
+}
+.report_detail:hover{
+    background-color: #ccc;
+}
+
+

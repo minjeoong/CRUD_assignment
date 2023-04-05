@@ -1,9 +1,44 @@
-<h1>새 글 작성하기</h1>
-<form action="{%url 'create'%}" method="POST">
-    {% csrf_token %}
-    제목 : <input type="text" name="title" />
-    본문 : <textarea name="content" id="" cols="30" rows="10"></textarea>
-    <input type="submit" value="작성하기"/>
-</form>
+
+{% load static%}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/detail.css'%}">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>새 글 작성하기</h1>
+    <nav class="gnb">
+        <ul>
+            <li><a href="{%url 'home'%}" class="menu_home">홈</a></li>
+            <li><a href="" class="menu_guest"></a>방명록</li>
+        </ul>
+    </nav>
+    <form action="{%url 'create'%}" method="POST"> 
+        <!-- create url 로 보내줌 -->
+
+        {% csrf_token %}
+        <div class="content">
+            <div class="title">
+                <h5>제목 </h5><input type="text" name="title" class="sub"/>
+            </div>
+
+            <br>
+            <div class="title">
+                <h5>본문 </h5><textarea name="content" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="작성하기"/>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
 
 

@@ -1,0 +1,121 @@
+
+*{
+    margin:0;
+}
+
+
+h1 {
+    text-align: left;
+    margin-left: 19rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+}
+
+/* 메뉴 */
+.gnb{
+
+    display:block;
+    padding:0 0 0 15rem;
+    width: 200px;
+    height: 72px;
+    
+}
+ul{
+    list-style-type: none;
+    display:inline-block;
+    vertical-align: bottom;
+    height: 66px;
+   
+}
+
+li{
+    float: left;
+    padding: 0 26px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    font-size: 13px;
+    height: 40px;
+}
+/* li > a::after{
+    content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 4px;
+	background-color: #333;
+    width: 20%;
+} */
+
+/* 검색 */
+.why{
+    float: right;
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+    display: block;
+    /* margin:auto; */
+    text-align:right;
+    margin: 0 20rem 2rem 0 ;
+}
+.why > form > button{
+    padding:2px 10px 2px 10px;
+    border: none;
+    color: teal;
+}
+.why > form > button:hover{
+    background-color: #bbb;
+}
+
+/* 링크 컬러변경 */
+a{
+    text-decoration-line: none;
+    color: black;
+    padding-bottom: 25px;
+    border-bottom: 5px solid #000;
+}
+a:visited{
+    color:teal;
+}
+
+/* 새글 작성하가ㅣ */
+.divnew{
+    text-align: center;
+    padding:0 0 2rem 0;
+    margin-left: 6rem;
+}
+.newreport {
+    
+    padding:5px;
+    border-radius: 6px;
+    color:#fff;
+    background-color: rgba(0, 128, 128, 0.63);
+}
+.newreport:visited{
+    color: #000;
+}
+
+/* 글 자체 */
+.report{
+    text-align: center;
+    
+}
+.report_detail{
+    
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    padding:1.2rem 0 1.2rem 0 ;
+    /* border-radius: 10px; */
+    margin:0 19.5rem 1.5rem 19rem;
+    transition: 0.5s;
+}
+.report_detail:hover{
+    background-color: #ccc;
+}
+
+
+.foot{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+

@@ -1,11 +1,61 @@
-<h1>LIKELION 11 Blog Project</h1>
-<a href="{%url 'new'%}">새 글 작성하기</a>
-<div>
-    {% for blog in blogs %}
-    <a href="{%url 'detail' blog.id%}">
-    <h2>{{blog.title}}</h2>
-    <p>{{blog.summary}}</p>
-    <p>{{blog.created_at}}</p>
-    </a>
-    {% endfor %}
-</div>
+
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css'%}">
+
+    
+    <title>Blog main</title>
+</head>
+
+
+
+<body>
+    <h1>My Blog</h1>
+
+    <nav class="gnb">
+        <ul>
+            <li><a href="{%url 'home'%}" class="menu_home">홈</a></li>
+            <li><a href="" class="menu_guest"></a>방명록</li>
+        </ul>
+        
+    </nav>
+    <div class="why">
+        <form action="{% url 'search' %}" method="post" >
+            {% csrf_token %}
+            <input type="text" name="searchkey">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    
+    
+    <div class="divnew"><a href="{%url 'new'%}" class = "newreport">새 글 작성하기</a></div>
+    
+    <div class = "report">
+        {% for blog in blogs %}
+        <div class="report_detail">
+            <a href="{%url 'detail' blog.id%}" > <!--디테일로 가는데 블로그 아이디를 들고가 -->
+            <h2>{{blog.title}}</h2>
+            <p>{{blog.summary}}</p>
+            <p style="font-size:10px">{{blog.created_at}}</p>
+            </a>
+        </div>
+        {% endfor %}
+        <br>
+    </div>
+</body>
+<footer>
+    <br>
+    <br>
+    <hr>
+    <div class="foot">
+        <h5>LIKE LION 11th @minjeong</h5>
+    </div>
+
+</footer>
+</html>

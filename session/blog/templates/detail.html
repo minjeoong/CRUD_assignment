@@ -1,6 +1,77 @@
-<h1>블로그 상세 페이지</h1>
-<br/>
-<hr/>
-<h2>{{blog.title}}</h2>
-<p>{{blog.content}}</p>
-<p>{{blog.created_at}}</p>
+
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/detail.css'%}">
+    <title>detail</title>
+
+</head>
+<body>
+
+    <h1>My Blog</h1>
+    <nav class="gnb">
+        <ul>
+            <li><a href="{%url 'home'%}" class="menu_home">홈</a></li>
+            <li><a href="" class="menu_guest"></a>방명록</li>
+        </ul>
+    </nav>
+    
+    <div class="mainback">
+        <div class="main">
+            <span class="title">
+                <h2>{{blog.title}}</h2>
+            </span>
+            <span class="created">
+                <p>{{blog.created_at}}</p>
+            </span>
+
+        </div>
+        
+    </div>
+
+    <div class="detail">
+        <div class="edit_button">
+            <a href="{% url 'edit' blog.id %}" class="button">수정하기</a>
+            <a href="{% url 'delete' blog.id %}" class="button">삭제하기</a>
+        </div>
+        <div class="content">
+            <p>{{blog.content}}</p>
+        </div>
+    </div>
+    
+    
+
+    
+    <br>
+
+
+
+    <div class="comment_Container">
+        댓글 
+        <hr>
+        {%for comment in comments %}
+        {{comment.body}} - {{comment.created_at}}
+        <br>
+        {% endfor %}
+
+        <br><br>
+        <div class="comment_title">
+            {{comment_cnt}}
+            개의 댓글 
+        </div>
+        <form method="POST" class="comments">
+            {%csrf_token%}
+            <input name = "body" type="text" class="comment_body" placeholder="소중한 댓글을 남겨주세요!">
+            <input class = "btn" type="submit" value="저장">
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
